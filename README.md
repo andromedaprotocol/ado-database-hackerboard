@@ -1,4 +1,4 @@
-# A repo for us Hackerboard participants to request new ADOs and Features
+# A repo for Hackerboard participants to request new ADOs and Features
 
 ## Requesting a new ADO 
 To request a new ADO, create a new [Issue](https://github.com/andromedaprotocol/ado-database/issues/new/choose) and use the ADO idea Request template. An example of a good submission can be found [here](https://github.com/andromedaprotocol/ado-database/issues/2). 
