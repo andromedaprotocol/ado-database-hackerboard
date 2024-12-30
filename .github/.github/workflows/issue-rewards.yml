@@ -1,0 +1,41 @@
+name: Issue Rewards
+on:
+  issues:
+    types: [closed]
+
+jobs:
+  process-reward:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'bounty')
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Process Reward
+        uses: actions/github-script@v6
+        env:
+          ANDROMEDA_API_KEY: ${{ secrets.ANDROMEDA_API_KEY }}
+        with:
+          script: |
+            const issue = context.payload.issue;
+            
+            // Extract reward amount from issue body
+            const rewardMatch = issue.body.match(/Reward:\s*(\d+)\s*ANDR/i);
+            if (!rewardMatch) {
+              console.log('No reward found in issue');
+              return;
+            }
+            
+            const reward = parseInt(rewardMatch[1]);
+            
+            // Create comment acknowledging reward
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body: `🎉 Congratulations! This bounty has been completed. ${reward} ANDR tokens will be sent to the contributor.`
+            });
+            
+            // TODO: Integrate with Andromeda's reward distribution system
+            // This is a placeholder for the actual reward distribution logic
+            console.log(`Would send ${reward} ANDR to contributor`); 
