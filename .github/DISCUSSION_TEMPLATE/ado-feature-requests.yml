@@ -1,5 +1,3 @@
-name: "ADO Feature Request"
-description: "Suggest a new feature or enhancement for an existing ADO."
 title: "[FEATURE REQUEST]: Brief description of the feature" # Users will complete the title
 labels: ["feature-request", "enhancement"] # Optional: add labels automatically
 body:

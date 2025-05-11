@@ -1,5 +1,3 @@
-name: "General Feedback or Question"
-description: "Share general feedback, ask questions, or discuss topics related to Andromeda."
 title: "[FEEDBACK/QUESTION]: " # Users will complete the title
 labels: ["feedback", "question"] # Optional
 body:

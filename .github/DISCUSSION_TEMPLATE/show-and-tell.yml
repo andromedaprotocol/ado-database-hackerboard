@@ -1,5 +1,3 @@
-name: "Show and Tell"
-description: "Show off something you have made with Andromeda!"
 title: "[SHOW & TELL]: My Project - " # Users will complete the title
 labels: ["show-and-tell", "community-project"] # Optional
 body:

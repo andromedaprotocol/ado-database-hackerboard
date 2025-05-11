@@ -1,5 +1,3 @@
-name: "ADO Idea Proposal"
-description: "Suggest an idea for a new Andromeda Digital Object."
 title: "[ADO IDEA]: " # Users will complete the title
 labels: ["ado-idea", "proposal"] # Optional: add labels automatically
 body:

@@ -1,5 +1,3 @@
-name: "ADO Submission"
-description: "Submit your completed ADO for evaluation and potential inclusion in the Andromeda ecosystem."
 title: "[ADO SUBMISSION]: Name of Your ADO" # Users will complete the title
 labels: ["ado-submission", "evaluation"] # Optional
 body:
