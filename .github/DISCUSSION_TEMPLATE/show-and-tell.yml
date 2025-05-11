@@ -1,0 +1,43 @@
+name: "Show and Tell"
+description: "Show off something you have made with Andromeda!"
+title: "[SHOW & TELL]: My Project - " # Users will complete the title
+labels: ["show-and-tell", "community-project"] # Optional
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Awesome! We'd love to see what you've built. Please share some details.
+  - type: input
+    id: project-name
+    attributes:
+      label: "1. Project Name"
+      description: "What is the name of your project?"
+    validations:
+      required: true
+  - type: textarea
+    id: project-description
+    attributes:
+      label: "2. Project Description"
+      description: "Tell us about your project. What does it do? What ADOs or Andromeda features does it use?"
+      placeholder: "Describe your project here..."
+    validations:
+      required: true
+  - type: input
+    id: project-link
+    attributes:
+      label: "3. Link to Project (e.g., Live Demo, GitHub Repo, Video)"
+      description: "Where can we see or learn more about your project?"
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: textarea
+    id: challenges-learnings
+    attributes:
+      label: "4. Challenges or Key Learnings (Optional)"
+      description: "Did you face any interesting challenges or have any key takeaways while building this?"
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        Feel free to include screenshots or short videos if they help showcase your project!

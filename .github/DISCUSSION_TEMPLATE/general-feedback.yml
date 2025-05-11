@@ -1,0 +1,30 @@
+name: "General Feedback or Question"
+description: "Share general feedback, ask questions, or discuss topics related to Andromeda."
+title: "[FEEDBACK/QUESTION]: " # Users will complete the title
+labels: ["feedback", "question"] # Optional
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We appreciate your feedback and questions! Please provide details below.
+  - type: textarea
+    id: feedback-details
+    attributes:
+      label: "Your Feedback, Question, or Discussion Topic"
+      description: "Please be as specific as possible. If reporting an issue, include steps to reproduce if applicable."
+      placeholder: "Enter your feedback, question, or topic here..."
+    validations:
+      required: true
+  - type: dropdown
+    id: topic-type
+    attributes:
+      label: "Type of Topic (Optional)"
+      description: "Help us categorize your post."
+      options:
+        - "General Feedback"
+        - "Question about Andromeda"
+        - "Documentation Issue"
+        - "Community Suggestion"
+        - "Other"
+    validations:
+      required: false

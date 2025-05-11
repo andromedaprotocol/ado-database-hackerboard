@@ -1,0 +1,85 @@
+name: "ADO Submission"
+description: "Submit your completed ADO for evaluation and potential inclusion in the Andromeda ecosystem."
+title: "[ADO SUBMISSION]: Name of Your ADO" # Users will complete the title
+labels: ["ado-submission", "evaluation"] # Optional
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting your ADO! Please provide the following details.
+  - type: input
+    id: ado-name
+    attributes:
+      label: "1. ADO Name"
+      description: "What is the official name of your ADO?"
+      placeholder: "e.g., Advanced Auction ADO"
+    validations:
+      required: true
+  - type: textarea
+    id: ado-summary
+    attributes:
+      label: "2. Summary / Abstract"
+      description: "Briefly describe what your ADO does and its primary purpose."
+    validations:
+      required: true
+  - type: input
+    id: repo-link
+    attributes:
+      label: "3. Link to Code Repository"
+      description: "Provide a public link to the source code (e.g., GitHub, GitLab)."
+      placeholder: "https://github.com/your-username/your-ado-repo"
+    validations:
+      required: true
+  - type: input
+    id: deployed-address
+    attributes:
+      label: "4. Deployed Contract Address(es) (Optional)"
+      description: "If deployed on a testnet or mainnet, provide the contract address(es)."
+      placeholder: "e.g., andr... (testnet), osmo... (mainnet)"
+    validations:
+      required: false
+  - type: textarea
+    id: documentation-link
+    attributes:
+      label: "5. Link to Documentation (Highly Recommended)"
+      description: "Provide a link to user guides, API references, or other documentation."
+      placeholder: "e.g., Link to your GitBook, README, etc."
+    validations:
+      required: false
+  - type: textarea
+    id: key-features
+    attributes:
+      label: "6. Key Features & Functionality"
+      description: "List the main features and what users can do with your ADO."
+    validations:
+      required: true
+  - type: dropdown
+    id: testing-status
+    attributes:
+      label: "7. Testing Status"
+      description: "What is the current testing status of your ADO?"
+      options:
+        - "Fully unit tested"
+        - "Partially unit tested"
+        - "Integration tests written"
+        - "Deployed and tested on testnet"
+        - "Audited (please provide audit report link if possible)"
+        - "Not yet extensively tested"
+      multiple: true
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: "8. License"
+      description: "What software license is your ADO released under?"
+      placeholder: "e.g., Apache 2.0, MIT, GPLv3"
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "9. Additional Information or Comments"
+      description: "Anything else you'd like to share about your submission?"
+    validations:
+      required: false

@@ -1,0 +1,54 @@
+name: "ADO Feature Request"
+description: "Suggest a new feature or enhancement for an existing ADO."
+title: "[FEATURE REQUEST]: Brief description of the feature" # Users will complete the title
+labels: ["feature-request", "enhancement"] # Optional: add labels automatically
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please provide as much detail as possible.
+  - type: input
+    id: ado-name
+    attributes:
+      label: "1. Which existing ADO is this feature request for?"
+      description: "Specify the name of the ADO you'd like to see enhanced."
+      placeholder: "e.g., Marketplace ADO, NFT ADO, Crowdfund ADO"
+    validations:
+      required: true
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: "2. What is the current behavior (if applicable)?"
+      description: "A clear and concise description of what the ADO currently does in relation to your feature idea."
+      placeholder: "Currently, the ADO allows X, but not Y..."
+    validations:
+      required: false
+  - type: textarea
+    id: desired-behavior
+    attributes:
+      label: "3. What is the desired behavior or new feature?"
+      description: "A clear and concise description of what you want to happen or be added."
+      placeholder: "I would like the ADO to also do Z, which would enable..."
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: "4. What is the use case or problem this feature solves?"
+      description: "How would this feature benefit users or developers? What problem does it address?"
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: "5. Do you have a proposed solution or implementation ideas? (Optional)"
+      description: "If you have thoughts on how this could be implemented, please share."
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: "Add any other context, examples, or screenshots here."
+    validations:
+      required: false
